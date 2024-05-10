@@ -12,11 +12,17 @@ Este proyecto es un sistema de gestión de cine desarrollado en Java como parte 
 * Base de Datos (MySQL Workbench)
 
 ## Integrantes del Proyecto
-*Nicolle Rosatti*
+<b> Nicolle Rosatti </b>
 
-*Joaquin Tissera*
+<b> Joaquin Tissera </b>
 
-*Tomas Rodeghiero*
+<b> Tomas Rodeghiero </b>
+
+**Nicolle Rosatti**
+
+**Joaquin Tissera**
+
+**Tomas Rodeghiero**
 
 ## Profesores
 El trabajo fue realizado bajo la supervisión del profesor:
