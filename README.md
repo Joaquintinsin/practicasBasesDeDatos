@@ -51,5 +51,12 @@ Para instalar y utilizar el proyecto, sigue estos pasos:
     // Donde esté la clase compilada
     java nombrearchivo
 
-## Contribuciones y Contacto
+## Contribuciones
 Este proyecto es de código abierto.
+
+## Contactos
+**Nicolle Rosatti: __nicollerosatti@gmail.com__**
+
+**Joaquin Tissera: __joaco.tissera@gmail.com__**
+
+**Tomas Rodeghiero: __tomyrodeghiero@gmail.com__**
