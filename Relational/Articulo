@@ -1,0 +1,7 @@
+Num_Art,descripcion,precio,cantidad,Stock_Min,Stock_Max,Mes_Ult_Mov,Fecha_Vto
+a0,b0,45,4,2,50,12,20250505
+a3,b3,3,2,3,30,3,20240303
+a1,b1,1,0,1,10,1,20240101
+a2,b2,2,1,2,20,12,20250202
+a4,b4,4,3,4,40,4,20230404
+a5,b5,6,6,1,60,6,20260606
