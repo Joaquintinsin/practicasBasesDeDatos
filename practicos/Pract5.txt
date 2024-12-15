@@ -1,0 +1,40 @@
+databases Pract5
+EjD, Skysa:
+nom_pista, nro_parada -> nom_parada, menu_parada
+menu_parada -> costo_menu
+
+mine:
+F {
+	nom_pista -> ubic_pista
+	cod_medio -> descr_medio, cap_max_medio, hora_cierre_medio
+	nro_parada, nom_pista -> nom_parada
+	dif_pista -> color_pista
+	nom_pista -> cod_medio
+	nom_pista, temporada_anio -> hora_cierre_medio
+	nom_pista, nro_parada -> nom_parada, menu_parada
+	menu_parada -> costo_menu
+}
+
+arreglado queda:
+F {
+	nom_pista -> ubic_pista, cod_medio
+	cod_medio -> descr_medio, cap_max_medio, hora_cierre_medio
+	nro_parada, nom_pista -> nom_parada, menu_parada
+	dif_pista -> color_pista
+	nom_pista, temporada_anio -> hora_cierre_medio
+	menu_parada -> costo_menu
+}
+
+EjE, peajes:
+F {
+	#empleado -> cod_peaje
+	numero_cabina, cod_peaje -> tiene_telepase
+	cod_peaje, categoria_vehiculo -> precio_peaje
+	cod_peaje, numero_cabina, fecha, turno -> #empleado
+	cod_peaje -> nombre_peaje, ubicacion_peaje
+	fecha, #empleado -> cod_peaje, numero_cabina, turno
+}
+
+CC = { (cod_peaje, numero_cabina, fecha, turno, categoria_vehiculo), 
+		(categoria_vehiculo, fecha, #empleado) }
+

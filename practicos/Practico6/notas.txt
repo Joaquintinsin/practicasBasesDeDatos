@@ -1,0 +1,42 @@
+R1(#consultorio, nom_cons)
+F1(#consultorio -> nom_cons)
+
+R2(dni_medico, dni_paciente, #consultorio, dni_secretaria, monodroga)	F{empty}	BCNF
+2) #consultorio ->> dni_s
+3) dni_s ->> #consultorio 	(no)
+4) #consultorio ->> dni_p
+5) dni_p ->> #consultorio	(no)
+6) dni_m ->> #consultorio	(no)
+7) dni_p ->> monodroga
+8) dni_m ->> dni_p
+
+como la 4 y la 8 chocan, porque dni_p esta dos veces con dos cosas:
+	deberiamos usar algun criterio tal que el dni lo permitimos para una y para la otra no
+	que no pudiera ocurrir
+	me puedo agarrar de lo que no dijo el texto por ejemplo
+
+misma estrategia que bcnf, elegir alguna y empeazar a dividir por esao
+div por 7
+	R3(dni_p, monodroga)
+	M3{7}	BCNF
+
+	R4(dni_m, dni_p, #cons, dni_s)
+	M4{2,8}
+		div por 2
+		R5(#cons, dni_s)
+		M5{2}
+
+		R6()
+		div por 8
+			R7(dni_m, dni_p)
+
+al tener que sacar una especificar bien porque;
+	no puedo dividir porque pierdo tal cosa
+	saco tal dependencia porque necesito esta otra y no dice nada sobre esta que estoy sacando
+
+lo nuevo, lo mas dificil de 4nf es
+determinar si esto que estoy por separar tiene algo que ver con el beta
+si no me interesa perderlo, no lo considero y listo
+
+hacer bien las dependencias sobre todo, ver las funcionales y multivaluadas, algunas van a salir
+habladas, otras tienen que estar porque son parte del texto
